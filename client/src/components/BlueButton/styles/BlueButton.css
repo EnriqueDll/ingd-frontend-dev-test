@@ -4,14 +4,26 @@
     color: #ffffff;
     border-radius: 20px;
     padding: 10px 18px;
-    margin-top: 25px;
+
     font-family: inherit;
     text-align: center;
     box-sizing: border-box;
-    width: 15%;
+    /* width: 15%; */
 }
 
 .UI-button:hover {
-    background: #00B9EB;
+    background: #06acdb;
     cursor: pointer;
+}
+
+@media screen and (max-width: 619px){
+    .UI-button {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 620px) and (max-width: 871px) {
+    .UI-button {
+        width: 30%;
+    }
 }

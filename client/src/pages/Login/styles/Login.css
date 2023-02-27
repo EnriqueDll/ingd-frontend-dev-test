@@ -67,6 +67,10 @@ h1 {
     margin-left: 10px;
 }
 
+.margin-button{
+    margin-top: 25px;
+}
+
 @media screen and (max-width: 670px){
     .login {
         background-image: none;
@@ -104,4 +108,14 @@ h1 {
         line-height: 1.1;
       }
 
+}
+
+@media screen and (min-width: 620px) and (max-width: 871px) {
+    .parent {
+        background-image: 
+            url(../../../assets/images/Logo-IngenieriaDigital.svg);
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: 25%;
+    }
 }
