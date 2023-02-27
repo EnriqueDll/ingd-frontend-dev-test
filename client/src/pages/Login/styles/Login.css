@@ -1,0 +1,107 @@
+.login{
+    background-image: 
+        url(../../../assets/images/BG-Login-1.svg), 
+        url(../../../assets/images/BG-Login-2.svg);
+    background-position: left top, right bottom;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 45%, 45%;
+
+    display: flex;
+    overflow: hidden;
+    min-height: 100vh;
+    background-color: #081551;
+    justify-content: center;
+    align-items: center;
+}
+
+.parent {
+    background-image: 
+        url(../../../assets/images/Logo-IngenieriaDigital.svg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 20%;
+
+    /* display: flex; */
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    height: 69%;
+    margin: 3em 3em;
+    padding: 0em 2em;
+    width: 82%;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.8em;
+    line-height: 1.1;
+  }
+
+.parent-title {
+    margin-top: 3em;
+    padding-top: 3em;
+}
+
+.p-style{
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.section-form{
+    display: flex;
+    margin-top: 2em;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+}
+
+.form-style{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.label-side {
+    display: flex;
+    margin-left: 10px;
+}
+
+@media screen and (max-width: 670px){
+    .login {
+        background-image: none;
+    }
+
+    .parent {
+        background-image: 
+            url(../../../assets/images/Logo-IngenieriaDigital.svg);
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: 50%;
+    
+        position: fixed;
+        justify-content: center;
+        align-items: center;
+        height: 60%;
+        margin: 3em 3em;
+        padding: 0em 1em;
+        width: 100%;
+        text-align: center;
+    }
+
+    .parent-title {
+        margin-top: 3em;
+        padding-top: 3em;
+    }
+    
+    .p-style{
+        font-size: 13px;
+        margin-top: 10px;
+    }
+
+    h1 {
+        font-size: 1.6em;
+        line-height: 1.1;
+      }
+
+}

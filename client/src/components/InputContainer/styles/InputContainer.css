@@ -1,0 +1,23 @@
+.InputContainer {
+    width: 50%;
+    display: flex;
+    flex-flow: column;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.InputContainer > div {
+    display: flex;
+    gap: 1rem;
+}
+
+.InputContainer input {
+    width: 100%;
+    margin: .5em 0;
+    padding: 10px 10px;
+    font-size: 0.8rem;
+    background: #eeeeee;
+    border: none;
+    border-radius: 12px;
+}
