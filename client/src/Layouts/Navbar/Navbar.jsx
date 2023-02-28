@@ -16,8 +16,10 @@ const Navbar = () => {
 	return (
 
 		<div className='Navbar'>
-			<BlueButton className='Button-style'>+ Agendar</BlueButton>
-			<img className='Navbar__logo' src={logo} />
+			<div className='Navbar__section'>
+				<BlueButton className='Button-style'>+ Agendar</BlueButton>
+				<img className='Navbar__logo' src={logo} />
+			</div>
 			<div className='Logout'>
 				<li className='Dropdown-li'>
 					<img className='Arrow-style' src={arrow} />

@@ -21,7 +21,6 @@
     background-repeat: no-repeat;
     background-size: 20%;
 
-    /* display: flex; */
     position: fixed;
     justify-content: center;
     align-items: center;
@@ -69,6 +68,7 @@ h1 {
 
 .margin-button{
     margin-top: 25px;
+    max-width: 100%;
 }
 
 @media screen and (max-width: 670px){
