@@ -37,8 +37,8 @@ const Assistants = () => {
 		<div className="Assistants">
 			<Header />
 			<div className="cards__container">
-				{list.map((item) => (
-					<AssistantsCard data={item} />
+				{list.map((item, i) => (
+					<AssistantsCard key={i} data={item} />
 				))}
 			</div>
 		</div>

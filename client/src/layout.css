@@ -5,14 +5,18 @@
     grid-template-areas: 
         "sidebar navbar"
         "sidebar content";
+    position: relative;
 }
 
 .Sidebar {
     grid-area: sidebar;
+    position: sticky;
 }
 
 .Navbar {
     grid-area: navbar;
+    position: sticky;
+    top: 0;
 }
 
 .Content {

@@ -6,8 +6,49 @@
 
 .AssistantsCard__header {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     border-bottom: 2px solid rgba(0, 0, 0, 0.1);
     padding: 10px 0;
+}
+
+.AssistantsCard__header_aux {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.AssistantsCard__header > * {
+    flex: 0 1;
+}
+
+.AssistantsCard__header_avatar {
+    width: 65px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.AssistantsCard__header p {
+    display: inline-block;
+}
+
+.AssistantsCard__header_name {
+    width: max-content;
+    color: #081551;
+    font-weight: bold;
+}
+
+.AssistantsCard__header_position {
+    color: #7b55bf;
+}
+
+.AssistantsCard__header_dots {
+    width: 25px;
+    height: auto;
+}
+
+.AssistantsCard__header_dots:hover {
+    cursor: pointer;
 }
 
 .AssistantsCard__body {
@@ -16,4 +57,13 @@
 
 .AssistantsCard__body ul{
     list-style: none;
+    display: flex;
+    flex-flow: column;
+    gap: 12px;
+}
+
+.AssistantsCard__list_item > img {
+    width: 12px;
+    height: auto;
+    margin-right: 15px;
 }

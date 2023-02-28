@@ -12,7 +12,7 @@ const Layout = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        if(!userAuth) return navigate("/login")
+        if (!userAuth) return navigate("/login")
     }, [userAuth])
 
     return (

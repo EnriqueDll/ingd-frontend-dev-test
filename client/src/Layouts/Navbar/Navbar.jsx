@@ -28,7 +28,8 @@ const Navbar = () => {
 					<img className='Arrow-style' src={arrow} />
 					<ul className='Dropdown' >
 						<li>
-							<Link className='Link-style' to='/' onClick={handleLogout}> Salir </Link>
+							{/* <Link className='Link-style' to='/' onClick={handleLogout}> Salir </Link> */}
+							<Link className='Link-style' onClick={handleLogout}> Salir </Link>
 						</li>
 					</ul>
 				</li>

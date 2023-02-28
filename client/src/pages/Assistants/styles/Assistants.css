@@ -8,6 +8,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 4rem;
 }
 
 .header > * {
@@ -58,7 +59,6 @@
 
 .cards__container {
     display: grid;
-    column-gap: 30px;
-    row-gap: 5px;
+    gap: 30px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
