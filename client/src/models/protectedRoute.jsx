@@ -1,8 +1,12 @@
-import { Navigate, Outlet } from "react-router-dom"
+import { Navigate } from "react-router-dom"
+import useAuth from "../hooks/useAuth";
 
-export const ProtectedRoute = ( {user, children, redirecTo = '/login'}) => {
-    if(!user){
+export const ProtectedRoute = ( { children, redirecTo = '/login'}) => {
+
+    const { userAuth } = useAuth();
+    
+    if(!userAuth) 
         return <Navigate to={redirecTo}/>
-    }
-    return children ? children : <Outlet />
+
+    return children;
 }

@@ -1,10 +1,139 @@
 .Dashboard{
     display: flex;
     overflow: hidden;
-    padding: 0px 40px;
+    padding: 40px 40px;
 
     min-height: 100vh;
     width: 100%;
-    background-color: blue;
+
+    flex-flow: row;
+    color: white;
   
 }
+
+.Large-Card{
+    display: flex;
+    width: 160%;
+    height: 320px;  
+}
+
+.card {
+    background-image: 
+        url(../../../assets/images/IngenieriaDigital-Portada.svg);
+    background-repeat: no-repeat;
+    background-size: 425px;
+    background-position: 100% 50%;
+
+    display: flex;
+    flex-flow: row;
+    padding: 15px;
+    margin: 15px;
+    justify-content: center;
+
+    background-color: #081551;
+    border-radius: 17px;
+    gap: 1rem;
+}
+
+.text-card{
+    display: flex;
+    flex-flow: column;
+    padding: 0px 15px;
+    justify-content: center;
+}
+
+.text-card__letters {
+    margin: 10px 0px;
+}
+
+.button-card{
+    background-color: #7B55BF;
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+    width: 140px;
+}
+
+.Small-Card {
+    display: flex;
+    height: 320px;  
+    width: 60%;
+}
+
+.Blue-Card {
+    display: flex;
+    flex-flow: row;
+    padding: 15px;
+    margin: 15px;
+    justify-content: center;
+
+    background-color: #00B9EB;
+    border-radius: 17px;
+    gap: 1rem;
+}
+
+.Blue-Card__Content{
+    background-image: 
+        url(../../../assets/images/Icono-Colaboradores.svg);
+    background-repeat: no-repeat;
+    background-size: 50px;
+    background-position: top right;
+
+    display: flex;
+    flex-flow: column;
+    padding: 10px 5px;
+
+}
+
+.top-section{
+    display: flex;
+    align-items: start;
+    height: 50%;
+}
+
+.top-section__button{
+    border-radius: 20px;
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 0.4em 0.3em;
+    font-size: 1em;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    width: 100px;
+}
+
+.bottom-section{
+    display: flex;
+    flex-flow: column;
+    justify-content: end;
+    height: 50%;
+}
+
+@media screen and (max-width: 1050px){
+
+    .Large-Card{
+        width: 100%;
+    }
+
+    .card {
+        background-image: none;
+    }
+
+    .top-section__button{
+        width: 50%;
+    }
+
+}
+
+@media screen and (max-width: 573px){
+
+    .Dashboard{
+        flex-flow: column;
+    }
+
+    .Small-Card{
+        width: 100%;
+    }
+}
+

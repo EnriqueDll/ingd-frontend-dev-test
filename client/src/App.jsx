@@ -1,37 +1,29 @@
-import { Suspense, useState } from 'react'
-import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom'
-import './App.css'
-import Navbar from './Layouts/Navbar/Navbar'
-import Sidebar from './Layouts/Sidebar/Sidebar'
-import { PrivateRoutes, PublicRoutes } from './models/routes'
-import { Assistants, Dashboard, Login } from './pages'
-import { ProtectedRoute } from './models/protectedRoute'
+import { Route, Routes } from "react-router-dom";
+import { PrivateRoutes, PublicRoutes } from "./models/routes";
+import { Assistants, Dashboard, Login, NotFound, } from "./pages";
+import "./App.css";
+
+import Layout from "./Layout"
 
 function App() {
 
-    const [user, setUser] = useState();
-
     return (
         <div className="App">
-            <Suspense fallback={<>Cargando...</>}>
-                <BrowserRouter>
-
-                    {/* <Navbar />
-                    <Sidebar /> */}
-
-                    <Routes>
-                        <Route index element={<Login />} />
-                        <Route path="*" element={<>NOT FOUND :c </>} />
-                        <Route path={PublicRoutes.LOGIN} element={<Login />} />
-                        <Route element={<ProtectedRoute user={user}/>}>
-                            <Route path={PrivateRoutes.DASHBOARD} element={<Dashboard />} />
-                            <Route path={PrivateRoutes.ASSISTANTS} element={<Assistants />} />
-                        </Route>
-                    </Routes>
-                </BrowserRouter>
-
-
-            </Suspense>
+            <Routes>
+                <Route index element={<Login />} />
+                <Route path={PublicRoutes.LOGIN} element={<Login />} />
+                <Route element={<Layout />}>
+                    <Route
+                        path={PrivateRoutes.DASHBOARD}
+                        element={<Dashboard />}
+                    />
+                    <Route
+                        path={PrivateRoutes.ASSISTANTS}
+                        element={<Assistants />}
+                    />
+                </Route>
+                <Route path="*" element={<NotFound />} />
+            </Routes>
         </div>
     )
 }

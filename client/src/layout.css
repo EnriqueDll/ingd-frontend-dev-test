@@ -1,0 +1,22 @@
+.Layout {
+    display: grid;
+    grid-template-columns: minmax(300px, auto) 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 
+        "sidebar navbar"
+        "sidebar content";
+}
+
+.Sidebar {
+    grid-area: sidebar;
+}
+
+.Navbar {
+    grid-area: navbar;
+}
+
+.Content {
+    grid-area: content;
+    color: black;
+    overflow: auto;
+}

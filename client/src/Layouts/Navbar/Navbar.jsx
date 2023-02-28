@@ -3,14 +3,17 @@ import { Link } from 'react-router-dom';
 import arrow from '../../assets/images/Icono-Flecha.svg';
 import logo from '../../assets/images/Isologo-IngenieriaDigital.svg';
 import BlueButton from '../../components/BlueButton/BlueButton';
+import useAuth from '../../hooks/useAuth';
 
 import './styles/Navbar.css';
 
 const Navbar = () => {
 
+	const { setUserAuth } = useAuth();
+
 	const handleLogout = () => {
 		localStorage.removeItem("user");
-		localStorage.removeItem("password");
+		setUserAuth(null);
 	};
 
 	return (
