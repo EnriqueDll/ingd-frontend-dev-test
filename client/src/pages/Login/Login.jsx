@@ -1,32 +1,44 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import BlueButton from '../../components/BlueButton/BlueButton';
 import InputContainer from '../../components/InputContainer/InputContainer';
+import useAuth from '../../hooks/useAuth';
 import { getUser } from '../../services/auth.service';
 import './styles/Login.css';
 
 const Login = () => {
 
 	const navigate = useNavigate();
-	const [user, setUser] = useState();
-	const [password, setPassword] = useState();
+
+	const { userAuth, setUserAuth } = useAuth();
+
+	useEffect(() => {
+		if (userAuth) return navigate("/dashboard");
+	}, [userAuth])
+
+	const [username, setUsername] = useState("test@test.com");
+	const [password, setPassword] = useState("HolaMundo");
 
 	const login = async e => {
 		try {
+
 			e.preventDefault();
+
 			const response = await getUser({
-				user,
+				user: username,
 				password
 			});
+
 			if ('nombre' in response) {
-				localStorage.setItem('user', JSON.stringify(response['user']));
-				localStorage.setItem('password', JSON.stringify(response['password']));
-				navigate('/dashboard');
+				localStorage.setItem('user', JSON.stringify(response));
+				setUserAuth(response)
 			}
+
 		} catch (error) {
 			return console.error(`Algo salio mal`, error);
 		}
 	}
+
 	return (
 
 		<div className='login'>
@@ -46,7 +58,8 @@ const Login = () => {
 									type='email'
 									name='email'
 									id='email'
-									onChange={e => setUser(e.target.value)} />
+									value={username}
+									onChange={e => setUsername(e.target.value)} />
 							</InputContainer>
 							<InputContainer>
 								<label className='label-side'>Contraseña</label>
@@ -54,6 +67,7 @@ const Login = () => {
 									type='password'
 									name='password'
 									id='password'
+									value={password}
 									onChange={e => setPassword(e.target.value)} />
 							</InputContainer>
 							<div className='margin-button'>

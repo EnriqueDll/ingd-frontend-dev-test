@@ -1,25 +1,29 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import './App.css'
-import Navbar from './Layouts/Navbar/Navbar'
-import Sidebar from './Layouts/Sidebar/Sidebar'
-import { Assistants, Dashboard, Login } from './pages'
+import { Route, Routes } from "react-router-dom";
+import { PrivateRoutes, PublicRoutes } from "./models/routes";
+import { Assistants, Dashboard, Login, NotFound, } from "./pages";
+import "./App.css";
+
+import Layout from "./Layout"
 
 function App() {
 
     return (
         <div className="App">
-            <BrowserRouter>
-            <Navbar />
-            <Sidebar />
-                <Routes>
-                    <Route path="/" element={<Login />} />
-                    <Route path="*" element={<>NOT FOUND :c </>} />
-                    <Route path="/login" element={<Login />} />
-                    
-                    <Route path="/dashboard" element={<Dashboard />} />
-                    <Route path="/assistants" element={<Assistants /> } />
-                </Routes>
-            </BrowserRouter>
+            <Routes>
+                <Route index element={<Login />} />
+                <Route path={PublicRoutes.LOGIN} element={<Login />} />
+                <Route element={<Layout />}>
+                    <Route
+                        path={PrivateRoutes.DASHBOARD}
+                        element={<Dashboard />}
+                    />
+                    <Route
+                        path={PrivateRoutes.ASSISTANTS}
+                        element={<Assistants />}
+                    />
+                </Route>
+                <Route path="*" element={<NotFound />} />
+            </Routes>
         </div>
     )
 }

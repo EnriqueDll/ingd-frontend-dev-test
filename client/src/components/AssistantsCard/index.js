@@ -1,0 +1,1 @@
+export { default as AssistantsCard } from './AssistantsCard';
