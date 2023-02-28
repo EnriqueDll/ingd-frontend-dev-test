@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
 import Navbar from './Layouts/Navbar/Navbar'
+import Sidebar from './Layouts/Sidebar/Sidebar'
 import { Assistants, Dashboard, Login } from './pages'
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
         <div className="App">
             <BrowserRouter>
             <Navbar />
+            <Sidebar />
                 <Routes>
                     <Route path="/" element={<Login />} />
                     <Route path="*" element={<>NOT FOUND :c </>} />

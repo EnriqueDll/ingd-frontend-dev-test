@@ -1,3 +1,111 @@
-.sidebar{
+.Sidebar{
+    min-height: 100vh;
+    width: 300px;
+    background-color: #081551;
+}
 
+.Sidebar__Navigation {
+    display: flex;
+    flex-flow: column;
+    padding: 20px 20px;
+    min-height: 40vh;
+    align-items: start;
+}
+
+.Sidebar__Logo {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-top: 3em;
+    margin-bottom: 2em;
+}
+
+.Sidebar__Logo__img {
+    height: 60px;
+}
+
+.Sidebar__Brand {
+    background-image: url(../../../assets/images/Isologo-IngenieriaDigital.svg);
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 18%;
+
+    display: flex;
+    justify-content: end;
+    padding: 20px 8px; 
+    font-size: 15px;
+    border-radius: 12px;
+    background-color: rgba(179, 177, 177, 0.15);
+
+}
+
+.Buttons-Section {
+    display: flex;
+    flex-flow: column;
+    min-height: 40vh;
+}
+
+.Buttons-Section__Dashboard {
+    background-image: 
+        url(../../../assets/images/Icono-Home.svg);
+    background-repeat: no-repeat;
+    background-size: 8%;
+    background-position: 20% 50%;
+
+    display: flex;
+    justify-content: center;
+    margin: 5px 0px;
+    font-size: 14px;
+}
+
+.Buttons-Section__assistans {
+    background-image: 
+        url(../../../assets/images/Icono-Colaboradores.svg);
+    background-repeat: no-repeat;
+    background-size: 8%;
+    background-position: 20% 50%;
+
+    display: flex;
+    justify-content: center;
+    margin: 5px 0px;
+    font-size: 14px;
+}
+
+.Link-Sidebar {
+    display: flex;
+    justify-content: center;
+    padding: 15px 0px;
+    color: white;
+}
+
+.Link-Sidebar:hover{
+    background-color: rgba(179, 177, 177, 0.15);
+    cursor: pointer;
+}
+
+.Footer-Sidebar {
+    display: flex;
+    min-height: 20vh;
+}
+
+.Footer-Sidebar__Help {
+    background-image: 
+        url(../../../assets/images/Icono-Telefono.svg);
+    background-repeat: no-repeat;
+    background-size: 8%;
+    background-position: 18% 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 14px;
+}
+
+@media screen and (max-width: 720px){
+
+    .Sidebar {
+        display: none;
+    }
+    
 }
