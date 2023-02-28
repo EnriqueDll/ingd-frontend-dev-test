@@ -1,0 +1,97 @@
+.Navbar {
+    background-color: #ffffff;
+    border-bottom: 2px solid #E7E3EB;
+
+    padding: 10px 25px;
+    display: flex;
+    gap: 1rem;
+}
+
+.Navbar__section {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.Navbar__logo {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+
+    border-color: #081551;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 65px;
+}
+
+
+.Button-style {
+    background: #081551;
+    font-weight: 600;
+    margin: 0px 15px;
+    width: 140px;
+}
+
+.Arrow-style {
+    display: flex;
+    align-items: center;
+    height: 30px;
+}
+
+.Logout {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    width: 60px;
+    min-width: 60px;
+    justify-content: center;
+}
+
+.Logout li {
+    padding: 0.5rem 1rem;
+}
+  
+.Dropdown-li {
+    position: relative;
+}
+  
+.Dropdown-li:hover .Dropdown {
+    display: block;
+    opacity: 1;
+}
+  
+.Dropdown {
+    background-color: #C61635;
+    margin: 0;
+    padding: 0;
+    width: 65px;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    opacity: 0;
+    display: none;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+.Dropdown li {
+    list-style: none;
+}
+
+.Link-style {
+    color: white;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 720px){
+
+    .Navbar__logo {
+        display: none;
+    }
+
+    .Navbar button {
+        display: none;
+    }
+
+}

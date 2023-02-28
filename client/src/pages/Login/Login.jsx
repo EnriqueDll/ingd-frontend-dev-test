@@ -56,16 +56,13 @@ const Login = () => {
 									id='password'
 									onChange={e => setPassword(e.target.value)} />
 							</InputContainer>
-							<BlueButton type="submit">Ingresar</BlueButton>
+							<div className='margin-button'>
+								<BlueButton type="submit">Ingresar</BlueButton>
+							</div>
 						</form>
 					</div>
 				</div>
 			</div>
-			{/* <form onSubmit={login}>
-				<input id="user" name='user' onChange={e => setUser(e.target.value)}></input>
-				<input type="password" id="password" name='password' onChange={e => setPassword(e.target.value)}></input>
-				<button type="submit">Ingresar</button>
-			</form> */}
 		</div >
 
 	);
