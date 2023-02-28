@@ -16,8 +16,8 @@ const Login = () => {
 		if (userAuth) return navigate("/dashboard");
 	}, [userAuth])
 
-	const [username, setUsername] = useState("test@test.com");
-	const [password, setPassword] = useState("HolaMundo");
+	const [username, setUsername] = useState();
+	const [password, setPassword] = useState();
 
 	const login = async e => {
 		try {
@@ -53,7 +53,7 @@ const Login = () => {
 					<div className='section-form'>
 						<form className='form-style' onSubmit={login}>
 							<InputContainer>
-								<label className='label-side'>Correo Electronico</label>
+								<label className='label-side' htmlFor='email'>Correo Electronico</label>
 								<input
 									type='email'
 									name='email'
@@ -62,7 +62,7 @@ const Login = () => {
 									onChange={e => setUsername(e.target.value)} />
 							</InputContainer>
 							<InputContainer>
-								<label className='label-side'>Contraseña</label>
+								<label className='label-side' htmlFor='password'>Contraseña</label>
 								<input
 									type='password'
 									name='password'
